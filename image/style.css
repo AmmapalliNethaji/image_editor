@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #121212;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.editor-container {
+  background: #1e1e2f;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.editor-container.disabled .controls-panel,
+.editor-container.disabled .action-buttons button.download-btn,
+.editor-container.disabled .action-buttons button.reset-btn {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #ffcb6b;
+}
+
+.editor-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.controls-panel {
+  flex: 1;
+  min-width: 260px;
+  background: #2a2a40;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.filter-buttons, .transform-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-buttons button,
+.transform-buttons button {
+  flex: 1 1 48%;
+  background: #333;
+  border: 1px solid #555;
+  padding: 10px;
+  color: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filter-buttons button.active,
+.filter-buttons button:hover,
+.transform-buttons button:hover {
+  background: #ffcb6b;
+  color: #000;
+}
+
+.slider-control {
+  margin-top: 15px;
+}
+
+.slider-control label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.slider-control input {
+  width: 100%;
+  accent-color: #ffcb6b;
+}
+
+.image-preview {
+  flex: 2;
+  background: #191932;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 400px;
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  flex: 1;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+  color: #fff;
+}
+
+.upload-btn {
+  background: #6666ff;
+}
+
+.download-btn {
+  background: #1abc9c;
+}
+
+.reset-btn {
+  background: #e74c3c;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
